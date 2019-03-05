@@ -1,11 +1,28 @@
 .Filter {
-    font-size: 14pt;
+    border: 1px solid grey;
+    font-size: 16pt;
     display: block;
     margin: 0 auto;
-    width: 65%;
+    width: 50%;
     height: auto;
     padding-left: 1%;
     box-shadow: 1px 1px 2px 2px #8b8787;
-    line-height: 1.2em;
+    line-height: 1em;
     border-radius: 5px;
+    margin-bottom: 5%;
 } 
+
+.LabelText{
+    padding-top: 2%;
+}
+
+.FilterCard {
+    display: flex;
+    align-items: flex-start;
+}
+
+.LabelImage {
+    padding-left: 1%;
+    width: 7%;
+    height: auto;
+}

@@ -4,7 +4,7 @@ Input {
     display: block;
     margin: 0 auto;
     border: 1px solid grey;
-    width: 65%;
+    width: 50%;
     height: auto;
     padding-left: 1%;
     padding-top: 1%;
@@ -12,7 +12,7 @@ Input {
 }
 
 .SearchbarInput {
-    margin-top: 4%;
+    margin-top: 3%;
 }
 
 .SearchbarImage {
@@ -20,26 +20,30 @@ Input {
     align-items: center;
     justify-content: center;
     img {
-        margin-top: 3%;
+        margin-top: 12%;
         height: 40%;
         width: 40%;
     }
 }
 
-.SearchbarButton{
+.SearchbarButton{ 
+    border: 2px solid grey;
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     position: fixed;
-    bottom: 2%;
+    top: 2%;
     left: 1%;
-    right: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 Button {
-    border-radius: 10px;
+    border-radius: 30px;
     font-size: 1.8vw;
     max-width: 100%;
+    margin-top: 5%;
     height: auto;
 } 

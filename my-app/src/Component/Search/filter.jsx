@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import {Label} from 'semantic-ui-react';
+import {Label, Card} from 'semantic-ui-react';
 import history from '../History/history.jsx';
-import {Filter as FilterCss} from './filter.module.scss';
+import {Filter as FilterCss, LabelImage, FilterCard, LabelText} from './filter.module.scss';
 
 class Filter extends Component {
     constructor() {
@@ -59,16 +59,39 @@ class Filter extends Component {
 
         var list_items;
         if (sort_alpha === true) {
-            list_items = data_items.map((elem) => <Label key = {elem.name} 
-            onClick = {this.clickHandler.bind(this, elem)}>{elem.name}, 
-            stats: {sum_stats(elem)}</Label>);
+            list_items = data_items.map((elem) => 
+            <Card className = {FilterCard}>
+                <Label className = {LabelText} key = {elem.name} 
+                onClick = {this.clickHandler.bind(this, elem)}>{elem.name}, 
+                stats: {sum_stats(elem)}
+                </Label>
+                <img className = {LabelImage}
+                src={elem.sprites.front_default}
+                alt={`Sprite of ${elem.name}`}/>
+            </Card>);
         } else if (sort_base === true) {
-            list_items = data_items.map((elem) => <Label key = {elem.name} 
-            onClick = {this.clickHandler.bind(this, elem)}>{elem.name}, 
-            base experience: {elem.base_experience} </Label>);
+            list_items = data_items.map((elem) => 
+            <Card className = {FilterCard}>
+                <Label className = {LabelText} key = {elem.name} 
+                onClick = {this.clickHandler.bind(this, elem)}>{elem.name}, 
+                base experience: {elem.base_experience}
+                </Label>
+                <img className = {LabelImage}
+                src={elem.sprites.front_default}
+                alt={`Sprite of ${elem.name}`}
+                />
+            </Card>);
         } else {
-            list_items = data_items.map((elem) => <Label key = {elem.name} 
-            onClick = {this.clickHandler.bind(this, elem)}>{elem.name}</Label>);
+            list_items = data_items.map((elem) => 
+            <Card className = {FilterCard}>
+                <Label className = {LabelText} key = {elem.name} 
+                onClick = {this.clickHandler.bind(this, elem)}>{elem.name}
+                </Label>
+                <img className = {LabelImage}
+                src={elem.sprites.front_default}
+                alt={`Sprite of ${elem.name}`}
+                />
+            </Card>);
         }
         const result_lists = list_items;
         return (

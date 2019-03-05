@@ -1,15 +1,14 @@
-
 .GalleryBar {
     background-image: url("https://images5.alphacoders.com/410/410373.png");
     background-position: center;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    border: 8px solid black;
-    border-radius: 30px;
+    border: 10px solid black;
+    border-radius: 15px;
     margin-top: 2%;
     margin-left: 1.5%;
     margin-right: 1.5%;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 }
 
 
@@ -49,26 +48,31 @@
 
 
 .GalleryCard {
-    flex: 1 0 12%;
+    border-radius: 50px;
+    margin-top: 2%;
     margin-left: 2%;
     margin-right: 2%;
+    margin-bottom: 4%;
     background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/pokeball-background-1.png");
     background-size: auto 140%;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
      
     img {
-        transform: translateY(-13%);
-        width: auto;
-        height: 100%;
+        transform: translateY(-10%);
+        width: 110%;
+        height: auto;
     }
 }
 
 .GalleryMeta {
+    transform: translateY(-20%);
     position: relative;
-    font-size: 1vw;
+    font-size: 2vw;
     font-weight:bolder;
-    padding-top: 2%;
     padding-left: 1%;
 }

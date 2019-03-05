@@ -1,14 +1,74 @@
-.GalleryCheck {
+
+.GalleryBar {
+    background-image: url("https://images5.alphacoders.com/410/410373.png");
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    border: 8px solid black;
+    border-radius: 30px;
+    margin-top: 2%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-bottom: 1%;
+}
+
+
+.GalleryCheck1, .GalleryCheck2{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-right: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-size: 2.2vw;
+    font-weight: bolder;
+}
+
+.GalleryCheck1 {
+    padding-top: 2%;
     margin-top: 1%;
-    margin-bottom: 1%;
-    font-size: 1.6vw;
+}
+
+.GalleryCheck2 {
+    margin-top:20%;
+    padding-bottom: 2%;
 }
 
 .GalleryCheckbox {
+    zoom: 1.8;
+    padding-left: 2%;
+}
+
+.GalleryImage {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.GalleryCard {
+    flex: 1 0 20%;
     margin-left: 2%;
-    zoom: 1.6;
+    margin-right: 2%;
+    background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/pokeball-background-1.png");
+    background-size: auto 140%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 1%;
+     
+    img {
+        transform: translateY(-5%);
+        width: auto;
+        height: 115%;
+    }
+}
+
+.GalleryMeta {
+    position: absolute;
+    font-size: 1.5vw;
+    font-weight:bolder;
+    padding-top: 0.5%;
+    padding-left: 1%;
 }

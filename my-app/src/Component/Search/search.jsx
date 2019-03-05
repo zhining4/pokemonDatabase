@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Input} from 'semantic-ui-react';
 import axios from 'axios';
 import Filter from './filter.jsx';
-import {SearchbarInput, SearchbarImage, SearchbarButton} from './search.module.scss';
+import {SearchbarBackground, SearchbarSection, SearchbarInput, SearchbarImage, SearchbarButton} from './search.module.scss';
 import history from '../History/history.jsx';
 
 class Search extends Component {
@@ -153,7 +153,6 @@ class Search extends Component {
 		</div>		
 		)
 	}
-
 }
 
 function isInList(input, arr) {

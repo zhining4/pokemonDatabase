@@ -35,6 +35,9 @@ class Detail extends Component {
 			results.forEach(function(response) {
 				pokemons_arr.push(response.data);
 			})
+      for (var i = 0; i < pokemons_arr.length; i++) {
+				pokemons_arr[i].name = pokemons_arr[i].name[0].toUpperCase() + pokemons_arr[i].name.substring(1);
+			}
       this.setState({pokemons_arr: pokemons_arr});
       var pokemon = pokemons_arr[this.props.match.params.id-1];
       this.setState({pokemon: pokemon});

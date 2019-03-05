@@ -74,7 +74,10 @@ class Gallery extends Component {
 		.then(results => {
 			results.forEach(function(response) {
 				pokemons_arr.push(response.data);
-			})
+            })
+            for (var i = 0; i < pokemons_arr.length; i++) {
+				pokemons_arr[i].name = pokemons_arr[i].name[0].toUpperCase() + pokemons_arr[i].name.substring(1);
+			}
             this.setState({pokemons_arr: pokemons_arr, 
                            results: pokemons_arr});
 		})
@@ -975,7 +978,10 @@ class Gallery extends Component {
         const imageGallery = dataItems.map((elem) => 
         <Card className = {GalleryCard} key = {elem.name} onClick = {this.clickHandler.bind(this, elem)}>
             <Card.Meta className = {GalleryMeta}>
-                {elem.id}
+                Pokedex #{elem.id}
+            </Card.Meta>
+            <Card.Meta className = {GalleryMeta}>
+                {elem.name}
             </Card.Meta>
             <img
             src={elem.sprites.front_default}

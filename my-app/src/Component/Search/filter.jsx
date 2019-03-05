@@ -60,9 +60,8 @@ class Filter extends Component {
         var list_items;
         if (sort_alpha === true) {
             list_items = data_items.map((elem) => 
-            <Card className = {FilterCard}>
-                <Label className = {LabelText} key = {elem.name} 
-                onClick = {this.clickHandler.bind(this, elem)}>{elem.name}, 
+            <Card className = {FilterCard}  onClick = {this.clickHandler.bind(this, elem)}>
+                <Label className = {LabelText} key = {elem.name}>{elem.name}, 
                 stats: {sum_stats(elem)}
                 </Label>
                 <img className = {LabelImage}
@@ -71,9 +70,8 @@ class Filter extends Component {
             </Card>);
         } else if (sort_base === true) {
             list_items = data_items.map((elem) => 
-            <Card className = {FilterCard}>
-                <Label className = {LabelText} key = {elem.name} 
-                onClick = {this.clickHandler.bind(this, elem)}>{elem.name}, 
+            <Card className = {FilterCard}  onClick = {this.clickHandler.bind(this, elem)}>
+                <Label className = {LabelText} key = {elem.name}>{elem.name}, 
                 base experience: {elem.base_experience}
                 </Label>
                 <img className = {LabelImage}
@@ -83,9 +81,8 @@ class Filter extends Component {
             </Card>);
         } else {
             list_items = data_items.map((elem) => 
-            <Card className = {FilterCard}>
-                <Label className = {LabelText} key = {elem.name} 
-                onClick = {this.clickHandler.bind(this, elem)}>{elem.name}
+            <Card className = {FilterCard} onClick = {this.clickHandler.bind(this, elem)}>
+                <Label className = {LabelText} key = {elem.name}>{elem.name}
                 </Label>
                 <img className = {LabelImage}
                 src={elem.sprites.front_default}

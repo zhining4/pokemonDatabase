@@ -3,7 +3,8 @@ import axios from 'axios';
 import { Card }  from 'semantic-ui-react';
 import {Checkbox, CheckboxGroup} from 'react-checkbox-group';
 import history from '../History/history.jsx';
-import {GalleryBar, GalleryCheck1, GalleryCheck2, GalleryCheckbox, GalleryCard, GalleryMeta, GalleryImage} from './gallery.module.scss';
+import {GalleryBar, GalleryCheck1, GalleryCheck2, GalleryCheckbox, GalleryCard, GalleryMeta1,
+       GalleryMeta2, GalleryImage} from './gallery.module.scss';
 
 class Gallery extends Component {
     constructor() {
@@ -50,14 +51,13 @@ class Gallery extends Component {
         this.psychicHandler = this.psychicHandler.bind(this);
         this.iceHandler = this.iceHandler.bind(this);
         this.dragonHandler = this.dragonHandler.bind(this);
-        this.darkHandler = this.darkHandler.bind(this);
         this.fairyHandler = this.fairyHandler.bind(this);
     }
 
     componentDidMount() {
 		var num_arr = [];
 		//store all promises in an array
-		for (var i = 1; i <=200; i++) {
+		for (var i = 1; i <=151; i++) {
 			num_arr.push(i);
 		}
 
@@ -875,55 +875,6 @@ class Gallery extends Component {
         }
     }
 
-    darkHandler() {
-        var check_arr = this.state.checked;
-        if (this.state.darkCheck === false) {
-            this.setState({darkCheck: true});
-            check_arr.push('dark');
-            this.setState({checked: check_arr});
-            var pokemons = this.state.pokemons_arr;
-            var filtered = pokemons.filter(elem => {
-                for (var i = 0; i < elem.types.length; i++) {
-                    if (elem.types[i].type.name === 'dark') {
-                        if (this.state.results.length < this.state.pokemons_arr.length && !this.state.results.includes(elem)) {
-                            return true;
-                        } else if (this.state.results.length === this.state.pokemons_arr.length) {
-                            return true;
-                        }
-                    }
-                } 
-                return false;
-            })
-            if (this.state.results.length === this.state.pokemons_arr.length) {
-                this.setState({results: filtered});
-            } else {
-                var current = this.state.results;
-                var afterCurrent = current.concat(filtered);
-                this.setState({results: afterCurrent});
-            }
-        } else {
-            this.setState({darkCheck: false});
-            check_arr.splice(check_arr.indexOf('dark'), 1);
-            var current_2 = this.state.results;
-            var filtering = current_2.filter((elem) => {
-                for (var i = 0; i < elem.types.length; i++) {
-                    if (elem.types[i].type.name !== 'dark') {
-                        if (check_arr.includes(elem.types[i].type.name)) {
-                            return true;
-                        }
-                    }
-                } 
-                return false;
-            })
-            this.setState({checked: check_arr})
-            if (filtering.length > 0) {
-                this.setState({results: filtering});
-            } else {
-                this.setState({results: this.state.pokemons_arr});
-            }
-        }
-    }
-
     fairyHandler() {
         var check_arr = this.state.checked;
         if (this.state.fairyCheck === false) {
@@ -972,22 +923,22 @@ class Gallery extends Component {
             }
         }
     }
-    
+
     render() {
         var dataItems = this.state.results;
-        const imageGallery = dataItems.map((elem) => 
-        <Card className = {GalleryCard} key = {elem.name} onClick = {this.clickHandler.bind(this, elem)}>
-            <Card.Meta className = {GalleryMeta}>
-                Pokedex #{elem.id}
-            </Card.Meta>
-            <Card.Meta className = {GalleryMeta}>
-                {elem.name}
+        const imageGallery = dataItems.map((elem) => (
+            <Card className = {GalleryCard} key = {elem.name} onClick = {this.clickHandler.bind(this, elem)}>
+            <Card.Meta className = {GalleryMeta1}>
+                No. {elem.id}
             </Card.Meta>
             <img
             src={elem.sprites.front_default}
             alt={`Sprite of ${elem.name}`}
             />
-        </Card>);
+             <Card.Meta className = {GalleryMeta2}>
+                {elem.name}
+            </Card.Meta>
+            </Card>));
 
         return(
         <div>
@@ -1001,10 +952,10 @@ class Gallery extends Component {
                     <Checkbox className = {GalleryCheckbox} value = 'rock' name = 'rock' onClick = {this.rockHandler}/>rock
                     <Checkbox className = {GalleryCheckbox} value = 'bug' name = 'bug' onClick = {this.bugHandler}/>bug
                     <Checkbox className = {GalleryCheckbox} value = 'ghost' name = 'ghost' onClick = {this.ghostHandler}/>ghost
-                    <Checkbox className = {GalleryCheckbox} value = 'steel' name = 'steel' onClick = {this.steelHandler}/>steel
                  </CheckboxGroup> 
 
                 <CheckboxGroup className = {GalleryCheck2} name = 'type2' > 
+                <Checkbox className = {GalleryCheckbox} value = 'steel' name = 'steel' onClick = {this.steelHandler}/>steel
                     <Checkbox className = {GalleryCheckbox} value = 'fire' name = 'fire' onClick = {this.fireHandler}/>fire
                     <Checkbox className = {GalleryCheckbox} value = 'water' name = 'water'onClick = {this.waterHandler}/>water
                     <Checkbox className = {GalleryCheckbox} value = 'grass' name = 'grass' onClick = {this.grassHandler}/>grass
@@ -1012,7 +963,6 @@ class Gallery extends Component {
                     <Checkbox className = {GalleryCheckbox} value = 'psychic' name = 'psychic'onClick = {this.psychicHandler}/>psychic
                     <Checkbox className = {GalleryCheckbox} value = 'ice' name = 'ice' onClick = {this.iceHandler}/>ice
                     <Checkbox className = {GalleryCheckbox} value = 'dragon' name = 'dragon' onClick = {this.dragonHandler}/>dragon
-                    <Checkbox className = {GalleryCheckbox} value = 'dark' name = 'dark' onClick = {this.darkHandler}/>dark
                     <Checkbox className = {GalleryCheckbox} value = 'fairy' name = 'fairy' onClick = {this.fairyHandler}/>fairy
                 </CheckboxGroup>
             </div>    

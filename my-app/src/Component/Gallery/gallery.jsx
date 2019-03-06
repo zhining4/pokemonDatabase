@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Card }  from 'semantic-ui-react';
 import {Checkbox, CheckboxGroup} from 'react-checkbox-group';
 import history from '../History/history.jsx';
-import {GalleryBackground, GalleryBar, GalleryCheck1, GalleryCheck2, GalleryCheckbox, GalleryCard, GalleryMeta1,
+import {GalleryBar, GalleryCheck1, GalleryCheck2, GalleryCheckbox, GalleryCard, GalleryMeta1,
        GalleryMeta2, GalleryImage} from './gallery.module.scss';
 
 class Gallery extends Component {
@@ -941,7 +941,7 @@ class Gallery extends Component {
             </Card>));
 
         return(
-        <div className = {GalleryBackground}>
+        <div>
             <div className = {GalleryBar}>
                 <CheckboxGroup className = {GalleryCheck1} name = 'type1'>
                     <Checkbox className = {GalleryCheckbox} value = 'normal' name = 'normal' onClick = {this.normalHandler}/>normal

@@ -5,10 +5,9 @@
     background-repeat: no-repeat;
     border: 10px solid black;
     border-radius: 45px;
-    //margin-top: 2%;
     margin-left: 1.5%;
     margin-right: 1.5%;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
 }
 
 
@@ -34,10 +33,10 @@
 
 .GalleryCheckbox {
     zoom: 1.8;
-    padding-left: 2%;
 }
 
 .GalleryImage {
+    background: rgba(235, 235, 235, 0.5);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -47,26 +46,25 @@
 
 .GalleryCard {
     width: 22%;
+    color:rgba(135, 135, 135, 0.8);
     box-sizing: border-box;
-    background-color: white;
-    border: 2px solid rgba(215, 215, 215, 0.6);
-    border-radius: 5px;
+    background: white;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 25px;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
     margin-left: 1.5%;
     margin-right: 1.5%;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    padding-left: 6%;
-    padding-right: 6%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
 
     img {
-        //background: grey;
-        width: 130%;
+        width: 90%;
         height: auto;
     }
 }
@@ -74,13 +72,36 @@
 .GalleryMeta1, .GalleryMeta2 {
     font-size: 1.8vw;
     font-weight: bold;
-    color:rgba(135, 135, 135, 0.8);
 }
 
 .GalleryMeta1 {
-    transform: translateY(-100%);  
+    transform: translateY(-150%);   
 }
 
 .GalleryMeta2 {
-    transform: translateY(95%);  
+    transform: translateY(150%);  
 }
+
+.GalleryCard:hover {
+    cursor: pointer;
+    padding-top: 1%;
+    padding-bottom: 0%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    color: white;
+
+   img {
+       width: 140%;
+       height: auto;
+   }
+
+   .GalleryMeta1 {
+    transform: translateY(2%);
+   }  
+   
+   .GalleryMeta2 {
+    transform: translateY(65%);
+   }   
+}
+
+

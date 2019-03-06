@@ -1,16 +1,16 @@
 Input {
     position: relative;
-    font-size: 2.5vw;
+    font-size: 2vw;
     display: block;
     margin: 0 auto;
-    border: 2px solid rgba(215, 215, 215, 0.5);
+    border: 2px solid rgba(200, 200, 200, 0.5);
     width: 50%;
     height: auto;
     padding-left: 1%;
     padding-top: 1%;
     padding-bottom: 1%;
     border-radius: 5px;
-    box-shadow: 2px 0px 2px 1px rgba(215, 215, 215, 0.3)
+    //box-shadow: 2px 0px 2px 1px rgba(215, 215, 215, 0.3)
 }
 
 .SearchbarInput {
@@ -26,6 +26,10 @@ Input {
         height: 40%;
         width: 40%;
     }
+}
+
+.SearchbarImage:hover {
+    cursor: pointer;
 }
 
 .SearchbarButton{ 

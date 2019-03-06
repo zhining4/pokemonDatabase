@@ -1,14 +1,16 @@
 Input {
     position: relative;
-    font-size: 1.4vw;
+    font-size: 2.5vw;
     display: block;
     margin: 0 auto;
-    border: 1px solid grey;
+    border: 2px solid rgba(215, 215, 215, 0.5);
     width: 50%;
     height: auto;
     padding-left: 1%;
     padding-top: 1%;
     padding-bottom: 1%;
+    border-radius: 5px;
+    box-shadow: 2px 0px 2px 1px rgba(215, 215, 215, 0.3)
 }
 
 .SearchbarInput {
@@ -27,7 +29,9 @@ Input {
 }
 
 .SearchbarButton{ 
-    border: 2px solid grey;
+    border: 1px solid grey;
+    background-color: rgba(215, 215, 215, 0.1);
+    border-radius: 15px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -43,7 +47,5 @@ Input {
 Button {
     border-radius: 30px;
     font-size: 1.8vw;
-    max-width: 100%;
     margin-top: 5%;
-    height: auto;
 } 

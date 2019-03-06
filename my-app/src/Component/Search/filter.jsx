@@ -62,8 +62,8 @@ class Filter extends Component {
             list_items = data_items.map((elem) => 
             <Card className = {FilterCard} key = {elem.name + elem.id + sum_stats(elem)} 
             onClick = {this.clickHandler.bind(this, elem)}>
-                <Label className = {LabelText}>{elem.name}, 
-                stats: {sum_stats(elem)}
+                <Label className = {LabelText}>
+                {elem.name}-stats: {sum_stats(elem)}
                 </Label>
                 <img className = {LabelImage}
                 src={elem.sprites.front_default}
@@ -73,8 +73,8 @@ class Filter extends Component {
             list_items = data_items.map((elem) => 
             <Card className = {FilterCard} key = {elem.name + elem.id + elem.base_experience} 
             onClick = {this.clickHandler.bind(this, elem)}>
-                <Label className = {LabelText}>{elem.name}, 
-                base experience: {elem.base_experience}
+                <Label className = {LabelText}>
+                {elem.name}-base experience: {elem.base_experience}
                 </Label>
                 <img className = {LabelImage}
                 src={elem.sprites.front_default}

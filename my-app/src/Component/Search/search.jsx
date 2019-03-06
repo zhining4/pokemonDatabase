@@ -128,7 +128,9 @@ class Search extends Component {
 		return (
 		<div>
 			<div className = {SearchbarImage}>
-				<img onClick = {this.galleryHandler} src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt = "header" title = "header"/>
+				<img onClick = {this.galleryHandler} 
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+				 alt = "header" title = "header"/>
 			</div>
 			<div className = {SearchbarInput}>
 			<Input

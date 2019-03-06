@@ -6,21 +6,21 @@
     width: 51.3%;
     height: auto;
 } 
-k
+
 .LabelText{
-    padding-top: 5%;
+    transform: translateY(75%);
 }
 
 .FilterCard {
     display: flex;
     align-items: flex-start;
-    padding-top: 2%;
-    padding-left: 2%;
+    padding-top: 1%;
+    padding-left: 1%;
 }
 
 .LabelImage {
     float: right;
-    transform: translateY(-20%);
+    transform: translateY(-5%);
     width: 12%;
     height: auto;
 }

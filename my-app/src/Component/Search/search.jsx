@@ -121,7 +121,7 @@ class Search extends Component {
 	}
 
 	galleryHandler() {
-		history.push("/Pokemon");
+		history.push('/Pokemon');
 	}
 
 	render() {

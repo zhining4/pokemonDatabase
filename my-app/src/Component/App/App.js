@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <Router history = { history }>
         <Switch>
-          <Route exact path = '/' component={ Search }/>
+          <Route exact path = '/CS498RK_mp2' component={ Search }/>
           <Route exact path = '/Pokemon' component = { Gallery }/>
           <Route exact path = '/Pokemon/:id' component = { Detail }/>
         </Switch>

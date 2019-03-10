@@ -8,9 +8,9 @@ import Gallery from '../Gallery/gallery.jsx';
 class App extends Component {
   render() {
     return (
-      <Router history = {history}>
+      <Router history = { history }>
         <Switch>
-          <Route exact path = '/CS498RK_mp2' component={ Search }/>
+          <Route exact path = '/' component={ Search }/>
           <Route exact path = '/Pokemon' component = { Gallery }/>
           <Route exact path = '/Pokemon/:id' component = { Detail }/>
         </Switch>

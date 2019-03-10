@@ -15,7 +15,7 @@ class Filter extends Component {
         this.setState({pokemon: pokemon});
         this.props.hideResult();
         this.props.closeCheck(); 
-        history.push('/Pokemon/' + pokemon.id);
+        this.props.history.push('/Pokemon/' + pokemon.id);
     }
 
 

@@ -1,0 +1,44 @@
+.DetailTitle {
+  margin-bottom: 3%;
+  text-align: center;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 3vw;
+  color: rgba(50, 50, 50, 0.6);
+}
+
+.DetailImage {
+    margin-left: 12%;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    float: left;
+    width: 17%;
+    height: auto;
+    background-color: rgba(235, 235, 235, 0.6);
+}
+
+.DetailText {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    line-height: 1.5em;
+    float: left;
+    margin-left: 15%;
+    width: 30%;
+    height: auto;
+    border-radius: 15px;
+    background-color: rgba(25, 125, 250, 0.8);
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 1.7vw;
+    font-weight: bold;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.DetailSection {
+    line-height: 1.6em;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    flex: 1 0 50%;
+}

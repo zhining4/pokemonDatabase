@@ -51,6 +51,7 @@ class Gallery extends Component {
         this.psychicHandler = this.psychicHandler.bind(this);
         this.iceHandler = this.iceHandler.bind(this);
         this.dragonHandler = this.dragonHandler.bind(this);
+        this.darkHandler = this.darkHandler.bind(this);
         this.fairyHandler = this.fairyHandler.bind(this);
     }
 
@@ -876,6 +877,55 @@ class Gallery extends Component {
         }
     }
 
+    darkHandler() {
+        var check_arr = this.state.checked;
+        if (this.state.darkCheck === false) {
+            this.setState({darkCheck: true});
+            check_arr.push('dark');
+            this.setState({checked: check_arr});
+            var pokemons = this.state.pokemons_arr;
+            var filtered = pokemons.filter(elem => {
+                for (var i = 0; i < elem.types.length; i++) {
+                    if (elem.types[i].type.name === 'dark') {
+                        if (this.state.results.length < this.state.pokemons_arr.length && !this.state.results.includes(elem)) {
+                            return true;
+                        } else if (this.state.results.length === this.state.pokemons_arr.length) {
+                            return true;
+                        }
+                    }
+                } 
+                return false;
+            })
+            if (this.state.results.length === this.state.pokemons_arr.length) {
+                this.setState({results: filtered});
+            } else {
+                var current = this.state.results;
+                var afterCurrent = current.concat(filtered);
+                this.setState({results: afterCurrent});
+            }
+        } else {
+            this.setState({darkCheck: false});
+            check_arr.splice(check_arr.indexOf('dark'), 1);
+            var current_2 = this.state.results;
+            var filtering = current_2.filter((elem) => {
+                for (var i = 0; i < elem.types.length; i++) {
+                    if (elem.types[i].type.name !== 'dark') {
+                        if (check_arr.includes(elem.types[i].type.name)) {
+                            return true;
+                        }
+                    }
+                } 
+                return false;
+            })
+            this.setState({checked: check_arr})
+            if (filtering.length > 0) {
+                this.setState({results: filtering});
+            } else {
+                this.setState({results: this.state.pokemons_arr});
+            }
+        }
+    }
+
     fairyHandler() {
         var check_arr = this.state.checked;
         if (this.state.fairyCheck === false) {
@@ -964,6 +1014,7 @@ class Gallery extends Component {
                     <Checkbox className = {GalleryCheckbox} value = 'psychic' name = 'psychic'onClick = {this.psychicHandler}/>psychic
                     <Checkbox className = {GalleryCheckbox} value = 'ice' name = 'ice' onClick = {this.iceHandler}/>ice
                     <Checkbox className = {GalleryCheckbox} value = 'dragon' name = 'dragon' onClick = {this.dragonHandler}/>dragon
+                    <Checkbox className = {GalleryCheckbox} value = 'dark' name = 'dark' onClick = {this.darkHandler}/>dark
                     <Checkbox className = {GalleryCheckbox} value = 'fairy' name = 'fairy' onClick = {this.fairyHandler}/>fairy
                 </CheckboxGroup>
             </div>    

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import DetailView from '../Detail/detailView.jsx';
 import axios from 'axios';
 import {Button} from 'semantic-ui-react';
+import DetailView from '../Detail/detailView.jsx';
+import PolarArea from '../Detail/polarArea.jsx';
 
 class Detail extends Component {
   constructor(props) {
@@ -90,6 +91,7 @@ class Detail extends Component {
           return(
             <div>
               <DetailView pokemon = {this.state.pokemon} />
+              <PolarArea pokemon = {this.state.pokemon}/>
               <Button onClick = {this.previousHandler}>Previous</Button>
               <Button onClick = {this.nextHandler}>Next</Button>
             </div>

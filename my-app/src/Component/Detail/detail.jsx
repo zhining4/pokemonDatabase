@@ -81,7 +81,6 @@ class Detail extends Component {
   }
 
   render() {
-    //console.log(this.props.match.params.id);
     const noPokemon = (this.state.pokemon.name === undefined);
         if (noPokemon) {    //check if there is corresponding search result
              return (

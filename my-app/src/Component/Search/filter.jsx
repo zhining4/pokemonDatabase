@@ -23,6 +23,8 @@ class Filter extends Component {
         const data_items = this.props.results;
         const sort_alpha = this.props.checked_1;
         const sort_base = this.props.checked_2;
+
+        //sort data by different properties
         if (sort_alpha === true) {
             data_items.sort(function(a, b) {
                 var a_arr = a.stats;
@@ -56,7 +58,8 @@ class Filter extends Component {
                 data_items.reverse();
             }
         }
-
+        
+        //displaying the result
         var list_items;
         if (sort_alpha === true) {
             list_items = data_items.map((elem) => 
@@ -103,6 +106,7 @@ class Filter extends Component {
         )
     }
 } 
+
 function sum_stats(elem) {
     var sum = 0;
     var arr = elem.stats;

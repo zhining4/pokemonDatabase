@@ -1,6 +1,6 @@
-import React , {Component} from 'react'
-import {Polar} from 'react-chartjs-2';
-
+import React , {Component} from 'react';
+import {Bar} from 'react-chartjs-2';
+import {PolarDetail} from './polarArea.module.scss';
 class PolarArea extends Component {
     render() {
         const stats = this.props.pokemon.stats;
@@ -12,24 +12,46 @@ class PolarArea extends Component {
         }
         
         var data = {
+            labels: labels,
             datasets: [ 
                 {
                     data: values,
-                    backgroundColor: ['rgba(250, 50, 50, 0.65)', 'rgba(50, 250, 50, 0.65)', 
-                    'rgba(50, 50, 250, 0.65)', 'rgba(0, 250, 250, 0.65)', 'rgba(250, 0, 250, 0.65)', 
-                    'rgba(250, 250, 0, 0.65)'],
-                    borderWidth: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
+                    label: "Statistics",
+                    font: {
+                        size: 15,
+                    },
+                    backgroundColor: ['rgba(200, 150, 250, 0.8)', 'rgba(50, 250, 50, 0.65)', 
+                    'rgba(50, 50, 250, 0.65)', 'rgba(250, 250, 0, 0.65)', 'rgba(250, 50, 50, 0.65)',
+                    'rgba(200, 200, 200, 0.8)'],
                 } 
             ],
-            labels: labels,
-            options: {
-                responsive: true,
-            }
+        }
+
+        var options = {
+            responsive: true,
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            paddingtop: 200,
+                            beginAtZero: true, 
+                            min: 0,
+                            max: 200,
+                            stepSize: 50,
+                        },
+                    }
+                ],
+                xAxes: [
+                    {
+                        barPercentage: 1,
+                    }
+                ],
+            },
         }
 
         return (
-            <div>
-                <Polar data = {data}/>
+            <div className = {PolarDetail} >
+                <Bar data = {data} options = {options}/>
             </div>
         )
     }

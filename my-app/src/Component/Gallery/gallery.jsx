@@ -57,7 +57,7 @@ class Gallery extends Component {
     componentDidMount() {
 		var num_arr = [];
 		//store all promises in an array
-		for (var i = 1; i <=151; i++) {
+		for (var i = 1; i <=250; i++) {
 			num_arr.push(i);
 		}
 
@@ -91,6 +91,7 @@ class Gallery extends Component {
         history.push('/Pokemon/'+ elem.id);
     }
     
+    //filtering depending on types
     normalHandler() {
         var check_arr = this.state.checked;
         if (this.state.normalCheck === false) {

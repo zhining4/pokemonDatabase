@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Button} from 'semantic-ui-react';
-import DetailView from '../Detail/detailView.jsx';
-import PolarArea from '../Detail/polarArea.jsx';
+import DetailView from './detailView.jsx';
+import BarDetail from './bar.jsx';
+import {DetailButton} from './detail.module.scss';
 
 class Detail extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Detail extends Component {
   componentDidMount() {
 		var num_arr = [];
 		//store all promises in an array
-		for (var i = 1; i <=151; i++) {
+		for (var i = 1; i <= 250; i++) {
 			num_arr.push(i);
 		}
 
@@ -89,10 +90,10 @@ class Detail extends Component {
         } else {
           return(
             <div>
+              <Button className = {DetailButton} onClick = {this.previousHandler}>Previous</Button>
+              <Button className = {DetailButton} onClick = {this.nextHandler}>Next</Button>
               <DetailView pokemon = {this.state.pokemon} />
-              <PolarArea pokemon = {this.state.pokemon}/>
-              <Button onClick = {this.previousHandler}>Previous</Button>
-              <Button onClick = {this.nextHandler}>Next</Button>
+              <BarDetail pokemon = {this.state.pokemon}/>
             </div>
           )
         }

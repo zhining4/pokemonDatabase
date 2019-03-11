@@ -121,7 +121,7 @@ class Search extends Component {
 	}
 
 	galleryHandler() {
-		history.push('/Pokemon');
+		this.props.history.push('/Pokemon');
 	}
 
 	render() {
@@ -143,7 +143,7 @@ class Search extends Component {
 			<Filter results = {this.state.results} checked_1 = {this.state.checked_1} 
 			checked_2 = {this.state.checked_2} hideResult = {this.hideResult} 
 			closeCheck = {this.closeCheck} pokemons_arr = {this.state.pokemons_arr} 
-			checked_descend = {this.state.checked_descend}/>
+			checked_descend = {this.state.checked_descend} history = {history}/>
 			<div className = {SearchbarButton}>
 				<Button onClick = {this.clickHandler1}>
 					sort by stats

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Label, Card} from 'semantic-ui-react';
-import history from '../History/history.jsx';
+//import history from '../History/history.jsx';
 import {Filter as FilterCss, LabelImage, FilterCard, LabelText} from './filter.module.scss';
 
 class Filter extends Component {
@@ -15,7 +15,7 @@ class Filter extends Component {
         this.setState({pokemon: pokemon});
         this.props.hideResult();
         this.props.closeCheck(); 
-        history.push('/Pokemon/' + pokemon.id);
+        this.props.history.push('/Pokemon/' + pokemon.id);
     }
 
 

@@ -80,11 +80,11 @@
 }
 
 .GalleryMeta1 {
-    transform: translateY(-150%);   
+    @include translateUp(-150%);      
 }
 
 .GalleryMeta2 {
-    transform: translateY(150%);  
+    @include translateUp(150%);  
 }
 
 .GalleryCard:hover {

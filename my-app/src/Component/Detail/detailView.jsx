@@ -47,7 +47,7 @@ class DetailView extends Component {
                             </div>
 
                             <div className = {DetailSection}>
-                                Weight: {this.props.pokemon.weight}lbs
+                                Weight: {this.props.pokemon.weight} lbs
                             </div>
 
                             <div className = {DetailSection}>

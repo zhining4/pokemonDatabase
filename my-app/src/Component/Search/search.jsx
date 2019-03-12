@@ -30,7 +30,7 @@ class Search extends Component {
 	componentDidMount() {
 		var num_arr = [];
 		//store all promises in an array
-		for (var i = 1; i <=250; i++) {
+		for (var i = 1; i <=251; i++) {
 			num_arr.push(i);
 		}
 

@@ -43,7 +43,7 @@ class DetailView extends Component {
                         />
                         <div className = {DetailText}>
                             <div className = {DetailSection}>
-                                Height: {(this.props.pokemon.height * 3.93701).toFixed(2)}'
+                                Height: {(this.props.pokemon.height * 0.328084).toFixed(2)}'  
                             </div>
 
                             <div className = {DetailSection}>

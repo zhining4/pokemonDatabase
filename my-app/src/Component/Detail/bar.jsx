@@ -35,7 +35,7 @@ class BarDetail extends Component {
                             beginAtZero: true,
                             fontSize: 15, 
                             min: 0,
-                            max: 300,
+                            max: 200,
                             stepSize: 50,
                         },
                     }

@@ -217,7 +217,7 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
-                filtering.sort((a, b) => {return (a.id - b.id);});
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;

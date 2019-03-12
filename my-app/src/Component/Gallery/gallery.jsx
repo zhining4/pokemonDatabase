@@ -113,10 +113,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -135,6 +137,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -162,10 +165,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -184,6 +189,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -211,10 +217,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -233,6 +241,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -260,10 +269,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -282,6 +293,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -309,10 +321,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -331,6 +345,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -358,10 +373,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -380,6 +397,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -407,10 +425,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -429,6 +449,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -456,10 +477,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -478,6 +501,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -505,10 +529,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -527,6 +553,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -554,10 +581,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -576,6 +605,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -603,10 +633,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -625,6 +657,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -652,10 +685,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -674,6 +709,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -701,10 +737,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -723,6 +761,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -750,10 +789,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -772,6 +813,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -799,10 +841,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -821,6 +865,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -848,10 +893,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -870,6 +917,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -897,10 +945,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id)});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -919,6 +969,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});
@@ -946,10 +997,12 @@ class Gallery extends Component {
                 return false;
             })
             if (this.state.results.length === this.state.pokemons_arr.length) {
+                filtered.sort((a, b) => {return (a.id - b.id)});
                 this.setState({results: filtered});
             } else {
                 var current = this.state.results;
                 var afterCurrent = current.concat(filtered);
+                afterCurrent.sort((a, b) => {return (a.id - b.id)});
                 this.setState({results: afterCurrent});
             }
         } else {
@@ -968,6 +1021,7 @@ class Gallery extends Component {
             })
             this.setState({checked: check_arr})
             if (filtering.length > 0) {
+                filtering.sort((a, b) => {return (a.id - b.id);});
                 this.setState({results: filtering});
             } else {
                 this.setState({results: this.state.pokemons_arr});

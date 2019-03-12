@@ -58,7 +58,7 @@ class Gallery extends Component {
     componentDidMount() {
 		var num_arr = [];
 		//store all promises in an array
-		for (var i = 1; i <=386; i++) {
+		for (var i = 1; i <= 494; i++) {
 			num_arr.push(i);
 		}
 

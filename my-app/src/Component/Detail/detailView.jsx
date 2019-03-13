@@ -77,6 +77,14 @@ DetailView.propTypes = {
       })),
       sprites: PropTypes.object,
     }),
+    weight: PropTypes.number,
+    height: PropTypes.number,
+    types: PropTypes.arrayOf(PropTypes.shape({
+        type: PropTypes.shape({
+            name: PropTypes.string,
+            url: PropTypes.string,
+        })
+    })),
   }
 
  export default DetailView;  

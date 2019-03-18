@@ -29,7 +29,7 @@ class DetailView extends Component {
                 )
             });
 
-              //display some data about the pokemon and its abilities
+            //display some data about the pokemon and its abilities
             return (
             <div>
                 <Card>    
@@ -65,6 +65,7 @@ class DetailView extends Component {
     } 
 } 
 
+//refer to react demo here
 DetailView.propTypes = {
     pokemon: PropTypes.shape({
       name: PropTypes.string,

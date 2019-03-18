@@ -33,7 +33,7 @@ class BarDetail extends Component {
                         ticks: {
                             paddingtop: 200,
                             beginAtZero: true,
-                            fontSize: 15, 
+                            fontSize: 11, 
                             min: 0,
                             max: 200,
                             stepSize: 50,
@@ -44,7 +44,7 @@ class BarDetail extends Component {
                     {
                         barPercentage: 0.9,
                         ticks: {
-                            fontSize: 16, 
+                            fontSize: 13, 
                         }
                     }
                 ],

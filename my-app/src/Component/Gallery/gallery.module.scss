@@ -75,16 +75,16 @@
 }
 
 .GalleryMeta1, .GalleryMeta2 {
-    font-size: 1.8vw;
+    font-size: 1.3vw;
     font-weight: bold;
 }
 
 .GalleryMeta1 {
-    @include translateUp(-150%);      
+    @include translateUp(-200%);      
 }
 
 .GalleryMeta2 {
-    @include translateUp(150%);  
+    @include translateUp(190%);  
 }
 
 .GalleryCard:hover {
@@ -92,23 +92,17 @@
     padding-top: 1%;
     padding-bottom: 1%;
     @include background("https://www.pngkey.com/png/full/2-21565_pokemon-sapphire-logo-png-for-kids-pokeball-transparent.png", 
-    center, auto 145%, no-repeat);
+    center, auto 147%, no-repeat);
 
    img {
-       width: 140%;
+       width: 130%;
        height: auto;
    }
 
    .GalleryMeta1 {
     color: white;
-    font-size: 2.2vw;
     @include translateUp(2%);
    }  
-   
-   .GalleryMeta2 {
-    font-size: 2.2vw;
-    @include translateUp(10%);
-   }   
 }
 
 

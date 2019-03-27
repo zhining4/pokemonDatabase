@@ -19,7 +19,7 @@ class Detail extends Component {
   componentDidMount() {
 		var num_arr = [];
 		//store all promises in an array
-		for (var i = 1; i <= 648; i++) {
+		for (var i = 1; i <= 649; i++) {
 			num_arr.push(i);
 		}
 

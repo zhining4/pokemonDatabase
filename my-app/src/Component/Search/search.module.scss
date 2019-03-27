@@ -6,11 +6,8 @@ Input {
     margin: 0 auto;
     border: 2px solid rgba(200, 200, 200, 0.5);
     width: 50%;
-    height: auto;
-    padding-left: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-radius: 5px;
+    height: 30px;
+    padding: 1%;
 }
 
 .SearchbarInput {
@@ -23,8 +20,8 @@ Input {
     justify-content: center;
     img {
         margin-top: 12%;
-        height: 40%;
-        width: 40%;
+        height: 140px;
+        width: auto;
     }
 }
 

@@ -1,27 +1,27 @@
 .Filter {
     display: block;
     font-family: 'PT Sans Caption', sans-serif;
-    font-size: 1.8vw;
+    font-size: 1.3vw;
     margin: 0 auto;
     margin-bottom: 5%;
-    width: 51.3%;
+    width: 52.5%;
     height: auto;
 } 
 
 .LabelText{
-    transform: translateY(75%);
+    transform: translateY(115%);
 }
 
 .FilterCard {
     display: flex;
     align-items: flex-start;
-    padding-top: 1%;
-    padding-left: 1%;
+    padding-top: 0.5%;
+    padding-left: 0.5%;
 }
 
 .LabelImage {
     float: right;
-    transform: translateY(-5%);
+    transform: translateY(-10%);
     width: 12%;
     height: auto;
 }

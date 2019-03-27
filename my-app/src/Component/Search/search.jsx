@@ -33,7 +33,7 @@ class Search extends Component {
 		for (var i = 1; i <= 649; i++) {
 			num_arr.push(i);
 		}
-
+		
 		var promises = [];
 
 		num_arr.forEach(function (poke_no) {

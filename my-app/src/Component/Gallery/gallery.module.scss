@@ -87,14 +87,14 @@
 
 .GalleryCard:hover {
     cursor: pointer;
-
-   img {
+    max-width: 97px;    //avoid some display error occuring when window is resized
+    img { 
         zoom: 1.5;
-        @include translateUp(-15%);
+        transform: translate(-17%);
     }   
    
     @include background("https://www.pngkey.com/png/full/2-21565_pokemon-sapphire-logo-png-for-kids-pokeball-transparent.png", 
-    center, auto 150%, no-repeat);
+    center, auto 140%, no-repeat);
 
    .GalleryMeta1 {
         color: white;
